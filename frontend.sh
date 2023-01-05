@@ -1,7 +1,8 @@
-# This script is to automate frontend configuration
-#! /bin/bash
+#!/bin/bash
+#This script is to automate frontend configuration
 current_location=$(pwd)
-exit
+
+#exit
 
 yum install nginx -y
 
@@ -16,4 +17,4 @@ cp $(current_location)/files/roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 systemctl enable nginx 
 systemctl start nginx
-systemctl restart nginx 
+systemctl restart nginx
