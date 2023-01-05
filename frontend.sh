@@ -1,4 +1,5 @@
 # This script is to automate frontend configuration
+#! /bin/bash
 current_location=$(pwd)
 exit
 
