@@ -1,5 +1,6 @@
 #!/bin/bash
 #This script is to automate frontend configuration
+
 conf_file_location=$(pwd)  #roboconfigfile_location
 
 yum install nginx -y
