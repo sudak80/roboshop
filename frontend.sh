@@ -1,8 +1,6 @@
 #!/bin/bash
 #This script is to automate frontend configuration
-current_location=$(pwd)
-
-#exit
+conffile_location=$(pwd)  #roboconfigfile_location
 
 yum install nginx -y
 
@@ -13,7 +11,7 @@ curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.z
 cd /usr/share/nginx/html 
 unzip /tmp/frontend.zip
 
-cp $(current_location)/files/roboshop.conf /etc/nginx/default.d/roboshop.conf
+cp $(conffile_location)/files/roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 systemctl enable nginx 
 systemctl start nginx
